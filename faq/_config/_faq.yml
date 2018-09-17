@@ -6,7 +6,7 @@ FAQSearchIndex:
   options:
     extraspath: '../faq/conf/extras'
     templatespath: '../faq/conf/templates'
-    
+
 TaxonomyTerm:
   extensions:
     - FAQTaxonomyTermExtension
@@ -14,3 +14,19 @@ TaxonomyTerm:
 Marcz\Search\Processor\Exporter:
   extensions:
     - FAQViewLinkExtension
+
+Marcz\Search\Config:
+  indices:
+    - name: 'FAQ'
+      class: 'FAQ'
+      has_one: true
+      has_many: true
+      many_many: true
+      searchableAttributes:
+        - 'Question'
+        - 'Answer'
+        - 'Keywords'
+        - 'Category'
+      attributesForFaceting:
+        - 'Keywords'
+        - 'Category'

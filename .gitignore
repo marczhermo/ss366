@@ -3,7 +3,7 @@
 
 # ignore all environment files
 _ss_environment.php
-
+silverstripe.log
 # ignore composer vendor folder
 /vendor/
 /framework/
@@ -15,7 +15,6 @@ _ss_environment.php
 /fulltextsearch-localsolr/
 /fulltextsearch/
 /multivaluefield/
-/mysite/
 /queuedjobs/
 /search-list/
 /sortablegridfield/
