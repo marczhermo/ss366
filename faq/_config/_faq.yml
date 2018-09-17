@@ -1,0 +1,16 @@
+---
+Name: faq
+After: 'framework/*','cms/*','searchlist/*'
+---
+FAQSearchIndex:
+  options:
+    extraspath: '../faq/conf/extras'
+    templatespath: '../faq/conf/templates'
+    
+TaxonomyTerm:
+  extensions:
+    - FAQTaxonomyTermExtension
+
+Marcz\Search\Processor\Exporter:
+  extensions:
+    - FAQViewLinkExtension
